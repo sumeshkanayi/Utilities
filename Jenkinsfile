@@ -22,7 +22,7 @@ pipeline {
     }
     stage('promote') {
       steps {
-        input(message: 'enter your name', ok: 'yes')
+        input(message: 'enter your name', ok: 'yes', submitter: 'root')
       }
     }
     stage('deploy') {
