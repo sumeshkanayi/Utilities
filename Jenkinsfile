@@ -25,5 +25,10 @@ pipeline {
         input(message: 'enter your name', ok: 'yes')
       }
     }
+    stage('deploy') {
+      steps {
+        writeFile(file: 'out.txt', text: 'hello')
+      }
+    }
   }
 }
