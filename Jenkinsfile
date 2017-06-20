@@ -34,6 +34,10 @@ pipeline {
       steps {
         sh 'ls'
         mail(subject: 'helo', body: 'haai')
+        waitUntil() {
+          build 'com.rxcorp.test'
+        }
+        
       }
     }
   }
