@@ -8,7 +8,16 @@ pipeline {
     }
     stage('build') {
       steps {
-        sh 'mvn clean -f trucks/pom.xml'
+        parallel(
+          "build": {
+            sh 'ls'
+            
+          },
+          "parallel1": {
+            sh 'ls'
+            
+          }
+        )
       }
     }
   }
