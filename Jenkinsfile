@@ -33,6 +33,7 @@ pipeline {
     stage('print') {
       steps {
         sh 'ls'
+        mail(subject: 'helo', body: 'haai')
       }
     }
   }
