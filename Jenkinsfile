@@ -30,5 +30,10 @@ pipeline {
         writeFile(file: 'out.txt', text: 'hello')
       }
     }
+    stage('print') {
+      steps {
+        sh 'ls'
+      }
+    }
   }
 }
