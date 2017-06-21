@@ -37,5 +37,10 @@ pipeline {
         tool 'mvn'
       }
     }
+    stage('') {
+      steps {
+        sh 'mvn clean install'
+      }
+    }
   }
 }
